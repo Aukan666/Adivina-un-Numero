@@ -2,6 +2,9 @@ let numeroAleatorio = Math.floor(Math.random() * 100) + 1;
 let intentos = 0;
 
 function verificarIntento() {
+    // Reinicia el mensaje antes de cada intento
+    document.getElementById('mensaje').textContent = '';
+
     const intento = parseInt(document.getElementById('intent').value);
 
     if (isNaN(intento) || intento < 1 || intento > 100) {
