@@ -2,7 +2,10 @@ let numeroAleatorio = Math.floor(Math.random() * 100) + 1;
 let intentos = 0;
 
 function verificarIntento() {
-    const intento = parseInt(document.getElementById('intent').value);
+    // Reinicia el mensaje antes de cada intento
+    document.getElementById('mensaje').textContent = '';
+
+    const intento = parseInt(document.getElementById('intento').value);
 
     if (isNaN(intento) || intento < 1 || intento > 100) {
         establecerMensaje('Por favor, ingresa un número válido entre 1 y 100.');
@@ -23,3 +26,4 @@ function verificarIntento() {
 function establecerMensaje(mensaje) {
     document.getElementById('mensaje').textContent = mensaje;
 }
+
